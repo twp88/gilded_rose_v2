@@ -39,8 +39,8 @@ describe GildedRose do
   describe "#update_quality" do
     it "should change the quality of aged_brie" do
       p 'sup1'
-      p @aged_brie
-      expect { @gr.update_quality(@aged_brie) }.to change{ @aged_brie.quality }.by(1)
+      @gr.update_quality(@aged_brie)
+      expect(@aged_brie.quality).to eq 41
       p 'sup2'
       p @aged_brie
     end

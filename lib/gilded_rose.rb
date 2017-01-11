@@ -4,12 +4,10 @@ class GildedRose
 
 
   def update_quality(item)
-     item
-     case item.name
-     when 'Backstage passes to a TAFKAL80ETC concert'
+     if item.name == 'Backstage passes to a TAFKAL80ETC concert'
        Methods.new.backstage(item)
-     when 'Aged Brie'
-       Methods.new.backstage(item)
+     elsif item.name == 'Aged Brie'
+       Methods.new.aged_brie(item)
      else
        Methods.new.normal(item)
      end
