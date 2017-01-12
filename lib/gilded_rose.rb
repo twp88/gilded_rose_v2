@@ -1,6 +1,6 @@
 class GildedRose
 
-  attr_accessor :items, :quality, :sell_in
+  attr_accessor :items, :quality, :sell_in, :item
 
 
   def update_quality(item)
@@ -8,6 +8,8 @@ class GildedRose
        Methods.new.backstage(item)
      elsif item.name == 'Aged Brie'
        Methods.new.aged_brie(item)
+     elsif item.name == 'Sulfuras, Hand of Ragnaros'
+       Methods.new.sulfuras(item)
      else
        Methods.new.normal(item)
      end
