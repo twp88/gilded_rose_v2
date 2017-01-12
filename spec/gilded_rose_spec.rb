@@ -15,7 +15,8 @@ describe GildedRose do
 
   describe "#update_quality" do
     it "does not change the name" do
-      GildedRose.new.update_quality(@items)
+      p @items
+      @gr.update_quality(@items)
       expect(@items[0].name).to eq "foo"
     end
   end

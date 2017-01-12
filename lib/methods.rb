@@ -7,33 +7,33 @@ class Methods
   end
 
   def aged_brie(item)
-    @item = item
+    assign_item(item)
     @name = 'Aged Brie'
     lower_sell_in_by_one(@item)
     alter_aged_brie_quality(@item)
   end
 
   def sulfuras(item)
-    @item = item
+    assign_item(item)
     @name = 'Sulfuras, Hand of Ragnaros'
   end
 
   def backstage(item)
-    @item = item
+    assign_item(item)
     @name = 'Backstage passes to a TAFKAL80ETC concert'
     alter_backstage_quality(@item)
     lower_sell_in_by_one(@item)
   end
 
   def conjured(item)
-    @item = item
+    assign_item(item)
     @name = 'Conjured'
     alter_conjured_quality(@item)
     lower_sell_in_by_one(@item)
   end
 
   def normal(item)
-    @item = item
+    assign_item(item)
     @name = 'Normal'
     alter_normal_quality(@item)
     lower_sell_in_by_one(@item)
@@ -63,6 +63,10 @@ private
 
   def lower_sell_in_by_one(item)
     item.sell_in -= 1
+  end
+
+  def assign_item(item)
+    @item = item
   end
 
 end
