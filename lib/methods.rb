@@ -29,6 +29,7 @@ class Methods
     @item = item
     @name = 'Conjured'
     alter_conjured_quality(@item)
+    lower_sell_in_by_one(@item)
   end
 
   def normal(item)

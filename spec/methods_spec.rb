@@ -134,8 +134,15 @@
    context 'more specific tests for #conjured' do
      describe '#conjured' do
        it 'It expects quality to reduce by 2 if item.quality > 0' do
-          @normal = Item.new("Conjured", 10, 40)
+          @conjured = Item.new("Conjured", 10, 40)
           expect { @methods.conjured(@conjured) }.to change{ @conjured.quality }.by(-2)
+       end
+     end
+
+     describe '#aged_brie' do
+       it 'It expects item.sell_in to reduce by 1 ' do
+          @conjured = Item.new("Conjured", 10, 40)
+          expect { @methods.conjured(@conjured) }.to change{ @conjured.sell_in }.by(-1)
        end
      end
    end
