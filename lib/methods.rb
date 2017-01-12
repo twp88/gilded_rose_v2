@@ -28,6 +28,7 @@ class Methods
   def conjured(item)
     @item = item
     @name = 'Conjured'
+    alter_conjured_quality(@item)
   end
 
   def normal(item)
@@ -51,13 +52,16 @@ private
     item.quality -= 2 if item.quality <= 0
   end
 
-  def lower_sell_in_by_one(item)
-    item.sell_in -= 1
-  end
-
   def alter_aged_brie_quality(item)
     item.quality += 1 if item.quality < 50
   end
 
+  def alter_conjured_quality(item)
+    item.quality -= 2 if item.quality > 0
+  end
+
+  def lower_sell_in_by_one(item)
+    item.sell_in -= 1
+  end
 
 end

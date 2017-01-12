@@ -10,6 +10,8 @@ class GildedRose
        Methods.new.aged_brie(item)
      elsif item.name == 'Sulfuras, Hand of Ragnaros'
        Methods.new.sulfuras(item)
+     elsif item.name == 'Conjured'
+       Methods.new.conjured(item)
      else
        Methods.new.normal(item)
      end
