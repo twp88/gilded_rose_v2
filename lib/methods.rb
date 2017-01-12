@@ -25,6 +25,11 @@ class Methods
     lower_sell_in_by_one(@item)
   end
 
+  def conjured(item)
+    @item = item
+    @name = 'Conjured'
+  end
+
   def normal(item)
     @item = item
     @name = 'Normal'

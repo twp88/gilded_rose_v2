@@ -38,6 +38,13 @@
 
      describe '#check_name' do
        it 'expects #check_name to evaluate correctly' do
+         @methods.conjured(@items)
+         expect(@methods.name).to eq 'Conjured'
+       end
+     end
+
+     describe '#check_name' do
+       it 'expects #check_name to evaluate correctly' do
          @methods.normal(@items)
          expect(@methods.name).to eq 'Normal'
        end
@@ -124,6 +131,14 @@
      end
    end
 
+   context 'more specific tests for #conjured' do
+     describe '#conjured' do
+       it 'It expects quality to reduce by 2 if item.quality > 0' do
+          @normal = Item.new("Conjured", 10, 40)
+          expect { @methods.conjured(@conjured) }.to change{ @conjured.quality }.by(-2)
+       end
+     end
+   end
 
 
 
