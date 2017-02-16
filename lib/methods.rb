@@ -1,25 +1,5 @@
 class Methods
 
-
-  # def aged_brie(item)
-  #   lower_sell_in_by_one(item)
-  #   alter_aged_brie_quality(item)
-  # end
-  #
-  # def backstage(item)
-  #   alter_backstage_quality(item)
-  #   lower_sell_in_by_one(item)
-  # end
-
-  # def conjured(item)
-  #   alter_conjured_quality(item)
-  #   lower_sell_in_by_one(item)
-  # end
-  #
-  # def normal(item)
-  #
-  # end
-
   def alter_backstage_quality(item)
     item.quality += 3 if item.sell_in <= 5 && item.quality < 50
     item.quality += 2 if item.sell_in <= 11 && item.sell_in >= 6 && item.quality < 50
