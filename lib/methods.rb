@@ -1,42 +1,24 @@
 class Methods
 
-  attr_reader :name, :quality
-
-  def initialize
-    @name = ''
-  end
 
   def aged_brie(item)
-    assign_item(item)
-    @name = 'Aged Brie'
-    lower_sell_in_by_one(@item)
-    alter_aged_brie_quality(@item)
-  end
-
-  def sulfuras(item)
-    assign_item(item)
-    @name = 'Sulfuras, Hand of Ragnaros'
+    lower_sell_in_by_one(item)
+    alter_aged_brie_quality(item)
   end
 
   def backstage(item)
-    assign_item(item)
-    @name = 'Backstage passes to a TAFKAL80ETC concert'
-    alter_backstage_quality(@item)
-    lower_sell_in_by_one(@item)
+    alter_backstage_quality(item)
+    lower_sell_in_by_one(item)
   end
 
   def conjured(item)
-    assign_item(item)
-    @name = 'Conjured'
-    alter_conjured_quality(@item)
-    lower_sell_in_by_one(@item)
+    alter_conjured_quality(item)
+    lower_sell_in_by_one(item)
   end
 
   def normal(item)
-    assign_item(item)
-    @name = 'Normal'
-    alter_normal_quality(@item)
-    lower_sell_in_by_one(@item)
+    alter_normal_quality(item)
+    lower_sell_in_by_one(item)
   end
 
 private
@@ -63,10 +45,6 @@ private
 
   def lower_sell_in_by_one(item)
     item.sell_in -= 1
-  end
-
-  def assign_item(item)
-    @item = item
   end
 
 end

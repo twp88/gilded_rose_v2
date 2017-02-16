@@ -8,49 +8,6 @@
      @methods = Methods.new
    end
 
-   describe '#initialize' do
-     it 'expects #method.name to = '' ' do
-       expect(@methods.name).to eq ''
-     end
-   end
-
-   context 'check that #check_name works' do
-     describe '#check_name' do
-       it 'expects #check_name to evaluate correctly' do
-         @methods.aged_brie(@items)
-         expect(@methods.name).to eq 'Aged Brie'
-       end
-     end
-
-     describe '#check_name' do
-       it 'expects #check_name to evaluate correctly' do
-         @methods.sulfuras(@items)
-         expect(@methods.name).to eq 'Sulfuras, Hand of Ragnaros'
-       end
-     end
-
-     describe '#check_name' do
-       it 'expects #check_name to evaluate correctly' do
-         @methods.backstage(@items)
-         expect(@methods.name).to eq 'Backstage passes to a TAFKAL80ETC concert'
-       end
-     end
-
-     describe '#check_name' do
-       it 'expects #check_name to evaluate correctly' do
-         @methods.conjured(@items)
-         expect(@methods.name).to eq 'Conjured'
-       end
-     end
-
-     describe '#check_name' do
-       it 'expects #check_name to evaluate correctly' do
-         @methods.normal(@items)
-         expect(@methods.name).to eq 'Normal'
-       end
-     end
-   end
-
    context 'more specific tests for #backstage' do
 
      describe '#backstage' do
