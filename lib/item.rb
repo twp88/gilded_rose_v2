@@ -1,4 +1,5 @@
 class Item
+    include Methods
     attr_accessor :name, :sell_in, :quality
 
     def initialize(name, sell_in, quality)
